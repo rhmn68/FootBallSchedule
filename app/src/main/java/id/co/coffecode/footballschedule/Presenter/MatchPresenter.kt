@@ -23,11 +23,12 @@ class MatchPresenter(val viewLast: LastMatchView) {
 
             uiThread {
                 viewLast.hideLoading()
-                try {
-                    viewLast.showLastMatch(data.matchItem!!)
-                }catch (e:NullPointerException){
-                    viewLast.showEmptyData()
-                }
+                viewLast.showLastMatch(data.results)
+//                try {
+//                    viewLast.showLastMatch(data.results)
+//                }catch (e:NullPointerException){
+//                    viewLast.showEmptyData()
+//                }
             }
         }
     }

@@ -1,6 +1,8 @@
 package id.co.coffecode.footballschedule.Model
 
-data class MatchResponse(
+import com.google.gson.annotations.SerializedName
 
-        val matchItem: List<MatchItem>?
+data class MatchResponse(
+        @SerializedName("results")
+        val results: List<MatchItem>
 )
