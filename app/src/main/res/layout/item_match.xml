@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewDateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ming, 20 Mar 1994"
+            android:textAlignment="center"
+            android:paddingTop="15dp"
+            android:textColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:id="@+id/textViewHomeTeam"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tottenham"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/textViewScoreHome"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="VS"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewScoreAway"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:gravity="left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAwayTeam"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="Chelsea"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
