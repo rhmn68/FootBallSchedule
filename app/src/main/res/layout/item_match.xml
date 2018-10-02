@@ -29,7 +29,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_margin="15dp"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:id="@+id/textViewHomeTeam"
@@ -75,7 +74,6 @@
             </LinearLayout>
 
             <TextView
-                android:layout_margin="15dp"
                 android:id="@+id/textViewAwayTeam"
                 android:gravity="left"
                 android:layout_weight="1"
