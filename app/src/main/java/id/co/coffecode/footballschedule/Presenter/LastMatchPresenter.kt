@@ -1,5 +1,6 @@
 package id.co.coffecode.footballschedule.Presenter
 
+import android.util.Log
 import com.google.gson.Gson
 import id.co.coffecode.footballschedule.Api.ApiRepository
 import id.co.coffecode.footballschedule.View.LastMatchView
@@ -22,6 +23,8 @@ class LastMatchPresenter(private val viewLast: LastMatchView,
 
             uiThread {
                 viewLast.hideLoading()
+
+                Log.d("review","data: "+data.events)
                 try {
                     viewLast.showLastMatch(data.events)
                 }catch (e:NullPointerException){

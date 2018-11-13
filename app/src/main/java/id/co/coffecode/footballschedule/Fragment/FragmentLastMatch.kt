@@ -9,22 +9,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.gson.Gson
+import id.co.coffecode.footballschedule.Activity.INTENT_TEAM_DETAIL
 import id.co.coffecode.footballschedule.Adapter.MatchAdapter
 import id.co.coffecode.footballschedule.Api.ApiRepository
 import id.co.coffecode.footballschedule.Model.EventsItem
 import id.co.coffecode.footballschedule.Presenter.LastMatchPresenter
 
 import id.co.coffecode.footballschedule.R
-import id.co.coffecode.footballschedule.TeamDetailActivity
+import id.co.coffecode.footballschedule.Activity.TeamDetailActivity
 import id.co.coffecode.footballschedule.Utils.invisible
 import id.co.coffecode.footballschedule.Utils.visible
 import id.co.coffecode.footballschedule.View.LastMatchView
 import kotlinx.android.synthetic.main.fragment_fragment_last_match.*
-import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.onRefresh
-import org.jetbrains.anko.support.v4.toast
 import org.jetbrains.anko.support.v4.startActivity
-import id.co.coffecode.footballschedule.INTENT_TEAM_DETAIL
 
 class FragmentLastMatch : Fragment(), LastMatchView {
 

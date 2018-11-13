@@ -1,4 +1,4 @@
-package id.co.coffecode.footballschedule
+package id.co.coffecode.footballschedule.Activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import id.co.coffecode.footballschedule.Fragment.FragmentLastMatch
 import id.co.coffecode.footballschedule.Fragment.FragmentNextMatch
+import id.co.coffecode.footballschedule.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,25 +15,26 @@ class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.prevMatch->{
+            R.id.prevMatch ->{
                 addFragment(fragmentLastMatch)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.nextMatch->{
+            R.id.nextMatch ->{
                 addFragment(fragmentNextMatch)
                 return@OnNavigationItemSelectedListener true
             }
         }
-        false
+        true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addFragment(fragmentLastMatch)
+//        addFragment(fragmentLastMatch)
 
         bottomNavigationMain.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        bottomNavigationMain.selectedItemId = R.id.prevMatch
     }
 
     private fun addFragment(fragment: Fragment){

@@ -1,4 +1,4 @@
-package id.co.coffecode.footballschedule
+package id.co.coffecode.footballschedule.Activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -9,12 +9,12 @@ import id.co.coffecode.footballschedule.Api.ApiRepository
 import id.co.coffecode.footballschedule.Model.EventsItem
 import id.co.coffecode.footballschedule.Model.TeamsItem
 import id.co.coffecode.footballschedule.Presenter.TeamDetailPresenter
+import id.co.coffecode.footballschedule.R
 import id.co.coffecode.footballschedule.Utils.gone
 import id.co.coffecode.footballschedule.Utils.invisible
 import id.co.coffecode.footballschedule.Utils.visible
 import id.co.coffecode.footballschedule.View.TeamDetailView
 import kotlinx.android.synthetic.main.activity_team_detail.*
-import org.jetbrains.anko.*
 
 const val INTENT_TEAM_DETAIL = "INTENT_TEAM_DETAIL"
 
