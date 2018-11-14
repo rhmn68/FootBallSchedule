@@ -64,10 +64,9 @@ class FragmentLastMatch : Fragment(), LastMatchView {
         gson = Gson()
         presenterLast = LastMatchPresenter(this, apiRepository, gson)
 
-        matchAdapter = MatchAdapter(context,matchItem,{
+        matchAdapter = MatchAdapter(context,matchItem) {
             startActivity<TeamDetailActivity>(INTENT_TEAM_DETAIL to it)
-            Log.d("coba", "Item : "+it)
-        })
+        }
 
         presenterLast.getLastMatch("4328")
         swipeLastMatch.onRefresh {

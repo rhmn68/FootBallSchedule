@@ -5,6 +5,7 @@ import id.co.coffecode.footballschedule.Api.ApiRepository
 import id.co.coffecode.footballschedule.View.TeamDetailView
 import org.jetbrains.anko.doAsync
 import id.co.coffecode.footballschedule.Api.GetApi
+import id.co.coffecode.footballschedule.Model.MatchResponse
 import id.co.coffecode.footballschedule.Model.TeamResponse
 import org.jetbrains.anko.uiThread
 
@@ -27,6 +28,21 @@ class TeamDetailPresenter(private val teamDetailView: TeamDetailView,
             uiThread {
                 teamDetailView.hideLoading()
                 teamDetailView.showTeamDetail(dataHomeTeam.teams, dataAwayTeam.teams)
+            }
+        }
+    }
+
+    fun getEvents(idEvent: String?){
+        teamDetailView.showLoading()
+
+        doAsync {
+            val dataEvent = gson.fromJson(apiRepository
+                    .doRequest(GetApi.getEventDetail(idEvent)),
+                    MatchResponse::class.java)
+
+            uiThread {
+                teamDetailView.hideLoading()
+                teamDetailView.showEvent(dataEvent.events)
             }
         }
     }

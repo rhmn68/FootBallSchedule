@@ -3,6 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorites">Favorites</string>
 
     <string-array name="dateEvent">
         <item>20-Juni-2018</item>

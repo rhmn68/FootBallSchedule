@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
+import id.co.coffecode.footballschedule.Fragment.FavoriteFragment
 import id.co.coffecode.footballschedule.Fragment.FragmentLastMatch
 import id.co.coffecode.footballschedule.Fragment.FragmentNextMatch
 import id.co.coffecode.footballschedule.R
@@ -12,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     val fragmentLastMatch = FragmentLastMatch()
     val fragmentNextMatch = FragmentNextMatch()
+    val fragmentFavorite = FavoriteFragment()
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -21,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.nextMatch ->{
                 addFragment(fragmentNextMatch)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.favMatch ->{
+                addFragment(fragmentFavorite)
                 return@OnNavigationItemSelectedListener true
             }
         }
